@@ -1,4 +1,14 @@
+// NextJS
 import Head from "next/head";
+
+// Shared Components
+import DefaultLayout from "@/components/DefaultLayout";
+
+/*--------------------*/
+
+/**
+ * Home Page Estructure
+ */
 
 export default function Home() {
   return (
@@ -9,9 +19,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h1>Mui Theme Practice</h1>
-      </main>
+      <DefaultLayout>
+        <main>
+          <h1>Mui Theme Practice</h1>
+        </main>
+      </DefaultLayout>
     </>
   );
 }
