@@ -12,6 +12,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Mui Practive
+## Mui Practice
 
 The goal of the project is to practive with the most up to date mui library
