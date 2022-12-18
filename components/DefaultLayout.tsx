@@ -1,5 +1,8 @@
 // Shared Components
-import NavBar from "./NavBar";
+import NavBar from "@/components/NavBar";
+
+// Context
+import ContextProvider from "@/utils/themeContext";
 
 // Types
 import type { FC, ReactNode } from "react";
@@ -16,8 +19,10 @@ interface IProps {
 const DefaultLayout: FC<IProps> = ({ children }) => {
   return (
     <div>
-      <NavBar />
-      <>{children}</>
+      <ContextProvider>
+        <NavBar />
+        <>{children}</>
+      </ContextProvider>
     </div>
   );
 };
