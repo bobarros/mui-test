@@ -22,15 +22,17 @@ import { INavProps } from "@/components/NavBar/types";
  */
 
 const SmallerScreensMenu: FC<INavProps> = (props) => {
-  const { defaultTypography, display } = useContext(ThemeContext);
+  const { defaultTypography, display:themeDisplay } = useContext(ThemeContext);
+  const display = themeDisplay.desktop("flex");
+
   const mobile = {
     icon: {
-      display: display.desktop("flex"),
+      display,
       mr: 1,
     },
     typography: {
       ...defaultTypography,
-      display: display.desktop("flex"),
+      display,
       flexGrow: 1,
     },
   };

@@ -22,17 +22,19 @@ interface IProps {
  */
 
 const LargeScreensMenu: FC<IProps> = ({ handleCloseNavMenu, pages }) => {
-  const { defaultTypography, display } = useContext(ThemeContext);
+  const { defaultTypography, display:themeDisplay } = useContext(ThemeContext);
+  const display = themeDisplay.mobile("flex");
+
   const mobile = {
     typography: {
       ...defaultTypography,
-      display: display.mobile("flex"),
+      display,
     },
     icon: {
-      display: display.mobile("flex"),
+      display,
     },
     box: {
-      display: display.mobile("flex"),
+      display,
       flexGrow: 1,
     },
     button: {
